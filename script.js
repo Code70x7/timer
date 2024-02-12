@@ -7,7 +7,12 @@ class Timer {
         this.startButton.addEventListener('click', this.start);
     }
     start = () => {
-        setInterval(this.tick, 1000);
+        this.tick() //setting up the first tick manually
+        this.interval = setInterval(this.tick, 1000);
+    }
+
+    pause = () => {
+        clearInterval(this.interval);
     }
     tick = () => {
         console.log('tick');

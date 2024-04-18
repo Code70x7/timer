@@ -9,16 +9,16 @@ class Timer {
             this.onComplete = callbacks.onComplete;
         }
 
-        this.startButton.addEventListener('click', this.start);
-        this.pauseButton.addEventListener('click', this.pause);
+        this.startButton.addEventListener('click', this.start.bind(this));
+        this.pauseButton.addEventListener('click', this.pause.bind(this));
     }
     start = () => {
         if (this.onStart) {
-            this.onStart();
+            this.onStart(this.timeRemaining);
         }
-        this.tick() //setting up the first tick manually
-        this.interval = setInterval(this.tick, 50);
-    }
+        this.tick()
+        this.interval = setInterval(this.tick, 20);
+    };
 
     pause = () => {
         clearInterval(this.interval);
@@ -30,9 +30,9 @@ class Timer {
                 this.onComplete();
             }
         } else {
-            this.timeRemaining = this.timeRemaining - .05;
+            this.timeRemaining = this.timeRemaining - .02;
             if (this.onTick) {
-                this.onTick();
+                this.onTick(this.timeRemaining);
             }
         }
     }
@@ -43,4 +43,4 @@ class Timer {
         this.durationInput.value = time.toFixed(2);
     }
 
-}  
+};

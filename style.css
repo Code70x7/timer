@@ -4,6 +4,7 @@
 }
 
 .timer {
+    margin-top: 100px;
     display: flex;
     position: relative;
     justify-content: center;
@@ -21,8 +22,25 @@ body {
     background-color: lightblue;
 }
 
-#input {
-    background-color: blue;
+#start {
+    margin-right: 10px;
+    border-radius: 20px;
+    width: 70px;
+    text-align: center;
+
+}
+
+#pause {
+    margin-left: 10px;
+}
+
+#duration {
+    color: blue;
+    background-color: rgb(125, 173, 188, .3);
+    border-radius: 5px;
+    width: 200px;
+    margin-bottom: 30px;
+
 }
 
 .timer input {

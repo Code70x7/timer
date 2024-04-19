@@ -23,6 +23,7 @@ class Timer {
     pause = () => {
         clearInterval(this.interval);
     }
+
     tick = () => {
         if (this.timeRemaining <= 0) {
             this.pause();

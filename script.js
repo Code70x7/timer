@@ -17,6 +17,7 @@ const timer = new Timer(durationInput, startButton, pauseButton, {
         );
     },
     onComplete() {
-        console.log('Timer is completed');
+        document.body.style.backgroundColor = "aqua";
+
     }
 });

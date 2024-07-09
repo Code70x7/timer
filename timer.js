@@ -1,4 +1,5 @@
 //creating a class in a separate file
+//this is the class definition
 class Timer {
     constructor(durationInput, startButton, pauseButton, callbacks) {
         this.durationInput = durationInput;
@@ -18,7 +19,7 @@ class Timer {
     }
     start = () => {
         if (this.onStart) {
-            //this is the argument for the callback function (totalDuration)
+            //this callback (totalDuration) how long in total
             this.onStart(this.timeRemaining);
         }
         this.tick()
@@ -41,6 +42,9 @@ class Timer {
         } else {
             this.timeRemaining = this.timeRemaining - .02;
             if (this.onTick) {
+                //calling onTick- pass in time remaining
+                //points to onTick(timeRemaining)-will receive it
+                // will determine what the offset /at each tick
                 this.onTick(this.timeRemaining);
             }
         }

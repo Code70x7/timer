@@ -12,7 +12,10 @@ circle.setAttribute('stroke-dasharray', perimeter);
 let duration;
 //optional functions - instantiating new class
 const timer = new Timer(durationInput, startButton, pauseButton, {
+    //callback functions
     onStart(totalDuration) {
+        //tracks how much total time was inputed
+        // then later in onTick can use it
         duration = totalDuration;
     },
     //creating math for dashoffset - animation of circle

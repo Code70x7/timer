@@ -1,5 +1,5 @@
-//creating a class in a separate file
-//this is the class definition
+//creating a class in a separate file / timer implementation
+//this is the class definition- we put this in a different file to clean up
 class Timer {
     constructor(durationInput, startButton, pauseButton, callbacks) {
         // Taking arguments and assigning to instance variables
@@ -24,7 +24,7 @@ class Timer {
     }
     start = () => {
         if (this.onStart) {
-            //this callback (totalDuration) how long in total
+            //this callback (totalDuration) how long time will go in total
             this.onStart(this.timeRemaining);
         }
         // so that there isn't a 1 second delay (the 2nd this.interval takes care of that)
@@ -32,6 +32,8 @@ class Timer {
         // when changing the interval- change in the tick function as well
         //this.interval name makes it so we can use it in pause =()=>function
         this.interval = setInterval(this.tick, 20);
+        // the 20 is 20 milliseconds that's why we do the -.02 down below
+        //1,000 milliseconds = 1 second
     };
 
     pause = () => {

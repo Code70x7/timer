@@ -10,7 +10,7 @@ const perimeter = circle.getAttribute('r') * 2 * Math.PI;
 circle.setAttribute('stroke-dasharray', perimeter);
 
 let duration;
-//optional functions - instantiating new class
+//optional functions - instantiating new class "stand in CLASSSSSSS"
 const timer = new Timer(durationInput, startButton, pauseButton, {
     //callback functions
     onStart(totalDuration) {

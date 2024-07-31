@@ -26,6 +26,7 @@ const timer = new Timer(durationInput, startButton, pauseButton, {
         );
     },
     onComplete() {
+        //setting the background color
         document.body.style.backgroundColor = "aqua";
 
     }

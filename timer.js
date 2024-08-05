@@ -25,6 +25,7 @@ class Timer {
     start = () => {
         if (this.onStart) {
             //this callback (totalDuration) how long time will go in total
+            //this.onStart () is where duration argument is inputed 
             this.onStart(this.timeRemaining);
         }
         // so that there isn't a 1 second delay (the 2nd this.interval takes care of that)

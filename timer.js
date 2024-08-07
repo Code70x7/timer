@@ -64,6 +64,8 @@ class Timer {
     // store information on how much time is remaining - in our DOM 
     //get and set makes it so we can use the parsing and countdown in different 
     //places, besides just in the tick() method. 
+    //getters access the properties (no () needed anymore)
+    //setters mutate the property
     get timeRemaining() {
         //parses the input - float will give us a decimal (INT will not)
         return parseFloat(this.durationInput.value);
